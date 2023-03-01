@@ -1,0 +1,36 @@
+{
+    "name": "hyder/json-response",
+    "description": "Json response handling for HTTP request.",
+    "keywords": [
+        "json-response",
+        "response",
+        "hyder",
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Tofayel Hyder Abhi",
+            "email": "tofayelhyder71@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hyder\\JsonResponse\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hyder\\JsonResponse\\JsonResponseServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
