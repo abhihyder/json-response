@@ -9,9 +9,11 @@ class JsonResponseService
 
     private $statusCode = Response::HTTP_OK;
 
-    private $header = [];
+    private $header = [
+        'Content-Type' => 'application/json'
+    ];
 
-    private function setStatusCode($statusCode)
+    public function setStatusCode($statusCode)
     {
         $this->statusCode = $statusCode;
 
@@ -20,7 +22,7 @@ class JsonResponseService
 
     public function withHeader(array $header)
     {
-        $this->header = $header;
+        $this->header = merge($this->header, $header);
 
         return $this;
     }

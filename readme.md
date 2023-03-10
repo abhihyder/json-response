@@ -18,7 +18,7 @@ The service provider will automatically get registered. Or you may manually add 
 ```
 
 ## Uses
-There are few methods available to return JSON responses. Before using these methods you have to add the line:
+There are few methods available to return JSON responses. Before using these methods you have to add this line:
 
 ```php
 use Hyder\JsonResponse\Facades\JsonResponse;
@@ -37,6 +37,32 @@ return JsonResponse::updated('Your message', $yourData); // Message and data are
 ```php
 return JsonResponse::withData($yourData, 'Your message'); // Message is optional. Status Code: 200
 ```
+
+### Method chaining
+You can chain methods together
+
+```php
+    return JsonResponse::setStatusCode($myStatusCode)->success('Your message');
+```
+or
+
+```php
+    return JsonResponse::setStatusCode($myStatusCode)->withHeader(array $header)->success('Your message');
+```
+#### Note that the setStatusCode method will not effect when chaining with created method or any available error methods
+
+### Response 
+
+```json
+    {
+        status : true,
+        message : 'Your message',
+        data : {
+            // ...
+        }
+    }
+```
+
 ### Available error methods
 ```php
 return JsonResponse::badRequest('Your message'); // Message is optional. Status Code: 400
@@ -52,4 +78,13 @@ return JsonResponse::notFound('Your message'); // Message is optional. Status Co
 ```
 ```php
 return JsonResponse::internalError('Your message'); // Message is optional. Status Code: 500
+```
+
+### Response 
+
+```json
+    {
+        status : false,
+        message : 'Your message', // Message can contain any data type
+    }
 ```
