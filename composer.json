@@ -29,7 +29,10 @@
             "providers": [
                 "Hyder\\JsonResponse\\JsonResponseServiceProvider"
             ]
-        }
+        },
+        "files": [
+            "README.md"
+          ]
     },
     "minimum-stability": "stable",
     "prefer-stable": true
