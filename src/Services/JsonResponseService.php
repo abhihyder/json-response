@@ -13,7 +13,7 @@ class JsonResponseService
         'Content-Type' => 'application/json'
     ];
 
-    public function statusCode($statusCode)
+    public function statusCode(int $statusCode)
     {
         $this->statusCode = $statusCode;
 
@@ -22,7 +22,7 @@ class JsonResponseService
 
     public function withHeader(array $header)
     {
-        $this->header = merge($this->header, $header);
+        $this->header = array_merge($this->header, $header);
 
         return $this;
     }
