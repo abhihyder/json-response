@@ -49,7 +49,8 @@ or
 ```php
     return JsonResponse::statusCode($myStatusCode)->withHeader(array $header)->success('Your message');
 ```
-#### Note that the statusCode() method will not effect when chaining with created method or any available error methods
+#### Note 
+The statusCode() method will not effect when chaining with created method or any available error methods
 
 ### Response 
 
@@ -78,6 +79,10 @@ return JsonResponse::notFound('Your message'); // Message is optional. Status Co
 ```
 ```php
 return JsonResponse::internalError('Your message'); // Message is optional. Status Code: 500
+```
+
+```php
+return JsonResponse::error('Your message', $statusCode); // Message is optional. Default status Code 500. You can override as you wish.
 ```
 
 ### Response 

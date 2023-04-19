@@ -106,4 +106,12 @@ class JsonResponseService
             'message' => $message
         ]);
     }
+
+    public function error($message = 'Something went wrong!', int $statusCode = Response::HTTP_INTERNAL_SERVER_ERROR)
+    {
+        return $this->statusCode($statusCode)->response([
+            'status' => false,
+            'message' => $message
+        ]);
+    }
 }
