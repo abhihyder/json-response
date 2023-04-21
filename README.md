@@ -8,7 +8,7 @@ composer require hyder/json-response
 ```
 
 ## Optional
-The service provider will automatically get registered. Or you may manually add the service provider in your config/app.php file:
+The service provider will automatically get registered. Or you may manually add the service provider in your `config/app.php` file:
 
 ```php
 'providers' => [
@@ -42,26 +42,26 @@ return JsonResponse::withData($yourData, 'Your message'); // Message is optional
 You can chain methods together
 
 ```php
-    return JsonResponse::statusCode($myStatusCode)->success('Your message');
+return JsonResponse::statusCode($myStatusCode)->success('Your message');
 ```
 or
 
 ```php
-    return JsonResponse::statusCode($myStatusCode)->withHeader(array $header)->success('Your message');
+return JsonResponse::statusCode($myStatusCode)->withHeader(array $header)->success('Your message');
 ```
 #### Note 
-The statusCode() method will not effect when chaining with created method or any available error methods
+The `statusCode()` method will not effect when chaining with created method or any available error methods
 
 ### Response 
 
 ```json
-    {
-        status : true,
-        message : 'Your message',
-        data : {
-            // ...
-        }
+{
+    status : true,
+    message : 'Your message',
+    data : {
+        // ...
     }
+}
 ```
 
 ### Available error methods
@@ -81,15 +81,16 @@ return JsonResponse::notFound('Your message'); // Message is optional. Status Co
 return JsonResponse::internalError('Your message'); // Message is optional. Status Code: 500
 ```
 
+You may need to return en error with different status codes. So you can use `error()` method with your specific status code.
 ```php
-return JsonResponse::error('Your message', $statusCode); // Message is optional. Default status Code 500. You can override as you wish.
+return JsonResponse::error('Your message', $statusCode); // Message is optional. Default status Code 500. You can overwrite as you wish.
 ```
 
 ### Response 
 
 ```json
-    {
-        status : false,
-        message : 'Your message', // Message can contain any data type
-    }
+{
+    status : false,
+    message : 'Your message', // Message can contain any data type
+}
 ```
