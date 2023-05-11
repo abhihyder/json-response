@@ -88,10 +88,10 @@ You can chain methods together for more flexibility:
 
 ```php
 // Return a success response with a custom status code and message
-return JsonResponse::statusCode($myStatusCode)->success('Your message');
+return JsonResponse::statusCode($statusCode)->success('Your message');
 
 // Return a success response with a custom status code, header, and message
-return JsonResponse::statusCode($myStatusCode)->withHeader($header)->success('Your message');
+return JsonResponse::statusCode($statusCode)->withHeader($header)->success('Your message');
 ```
 
 Please note that the `statusCode()` method will not affect the chaining when using the `created()` method.
@@ -143,7 +143,7 @@ You can chain methods together for more flexibility:
 
 ```php
 // Return a error response with a custom status code and message
-return JsonResponse::statusCode($myStatusCode)->success('Your message');
+return JsonResponse::statusCode($statusCode)->success('Your message');
 
 // Return a error response with a custom status code, header, and message
 return JsonResponse::withHeader($header)->error($message, 400);
@@ -166,15 +166,17 @@ In addition to the provided methods, you can also return a customized JSON respo
 
 ```php
 // Return a custom response with a custom status code and data
-return JsonResponse::statusCode($myStatusCode)->response($array);
+return JsonResponse::statusCode($statusCode)->response($array);
 
 // Return a custom response with a custom status code, header, and data
-return JsonResponse::statusCode($myStatusCode)->withHeader($header)->response($array);
+return JsonResponse::statusCode($statusCode)->withHeader($header)->response($array);
 
 ```
 
 ### License
+
 This package is open-source software licensed under the MIT license.
 
 ### Credits
+
 This package is developed and maintained by Tofayel Hyder Abhi.
