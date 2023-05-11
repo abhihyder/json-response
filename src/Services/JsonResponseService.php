@@ -83,7 +83,7 @@ class JsonResponseService
         ]);
     }
 
-    public function invalidRequest($message = 'Sorry! Required field is missing')
+    public function invalidRequest($message = 'Invalid request!')
     {
         return $this->statusCode(Response::HTTP_FORBIDDEN)->response([
             'status' => false,
@@ -91,7 +91,7 @@ class JsonResponseService
         ]);
     }
 
-    public function validationError($message = 'Sorry! Required field is missing')
+    public function validationError($message = 'Required field is missing!')
     {
         return $this->statusCode(Response::HTTP_UNPROCESSABLE_ENTITY)->response([
             'status' => false,
@@ -107,7 +107,7 @@ class JsonResponseService
         ]);
     }
 
-    public function internalError($message = 'Something went wrong!')
+    public function internalError($message = 'Internal server error!')
     {
         return $this->statusCode(Response::HTTP_INTERNAL_SERVER_ERROR)->response([
             'status' => false,

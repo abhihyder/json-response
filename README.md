@@ -118,16 +118,16 @@ Returns a response with a 400 Bad Request status code and an optional error mess
 2. `unauthenticated($message = 'Unauthenticated!')`   
 Returns a response with a 401 Unauthorized status code and an optional error message. It is used to indicate that the user making the request is not authenticated.
 
-3. `invalidRequest($message = 'Sorry! Required field is missing')`   
+3. `invalidRequest($message = 'Invalid request!')`   
 Returns a response with a 403 Forbidden status code and an optional error message. It is used to indicate that the request is invalid or does not meet the server's expectations.
 
-4. `validationError($message = 'Sorry! Required field is missing')`   
+4. `validationError($message = 'Required field is missing!')`   
 Returns a response with a 422 Unprocessable Entity status code and an optional error message. It is used to indicate that the request data failed validation checks.
 
 5. `notFound($message = 'Not found!')`   
 Returns a response with a 404 Not Found status code and an optional error message. It is used to indicate that the requested resource was not found.
 
-6. `internalError($message = 'Something went wrong!')`   
+6. `internalError($message = 'Internal server error!')`   
 Returns a response with a 500 Internal Server Error status code and an optional error message. It is used to indicate that an unexpected internal server error occurred.
 
 7. `error($message = 'Something went wrong!', int $statusCode = 500)`   
