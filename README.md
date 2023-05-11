@@ -73,14 +73,14 @@ public function update(Request $request, $id)
 
 The following methods are available for returning success responses:
 
-1. `created($message = "Data created successfully!", $data = null)`
+1. `created($message = "Data created successfully!", $data = null)`  
    Returns a response with a 201 Created status code, a success message, and optional data.
-2. `updated($message = "Data updated successfully!", $data = null)`
-   Returns a response with a 200 OK status code, a success message, and optional data.
-3. `success($message = "Request completed successfully!")`
-   Returns a response with a 200 OK status code and a success message.
-4. `withData($data, $message = "Data fetched successfully!")`
-   Returns a response with a 200 OK status code, a success message, and the provided data.
+2. `updated($message = "Data updated successfully!", $data = null)`    
+Returns a response with a 200 OK status code, a success message, and optional data.
+3. `success($message = "Request completed successfully!")`   
+Returns a response with a 200 OK status code and a success message.
+4. `withData($data, $message = "Data fetched successfully!")`   
+Returns a response with a 200 OK status code, a success message, and the provided data.
 
 ### Method Chaining
 
@@ -112,26 +112,26 @@ Please note that the `statusCode()` method will not affect the chaining when usi
 
 The following methods are available for returning error responses:
 
-1. `badRequest($message = "Bad request!")`  
-   Returns a response with a 400 Bad Request status code and an optional error message. This method is used to indicate a general "bad request" error.
+1. `badRequest($message = "Bad request!")`     
+Returns a response with a 400 Bad Request status code and an optional error message. This method is used to indicate a general "bad request" error.
 
-2. `unauthenticated($message = 'Unauthenticated!')`
-   Returns a response with a 401 Unauthorized status code and an optional error message. It is used to indicate that the user making the request is not authenticated.
+2. `unauthenticated($message = 'Unauthenticated!')`   
+Returns a response with a 401 Unauthorized status code and an optional error message. It is used to indicate that the user making the request is not authenticated.
 
-3. `invalidRequest($message = 'Sorry! Required field is missing')`
-   Returns a response with a 403 Forbidden status code and an optional error message. It is used to indicate that the request is invalid or does not meet the server's expectations.
+3. `invalidRequest($message = 'Sorry! Required field is missing')`   
+Returns a response with a 403 Forbidden status code and an optional error message. It is used to indicate that the request is invalid or does not meet the server's expectations.
 
-4. `validationError($message = 'Sorry! Required field is missing')`
-   Returns a response with a 422 Unprocessable Entity status code and an optional error message. It is used to indicate that the request data failed validation checks.
+4. `validationError($message = 'Sorry! Required field is missing')`   
+Returns a response with a 422 Unprocessable Entity status code and an optional error message. It is used to indicate that the request data failed validation checks.
 
-5. `notFound($message = 'Not found!')`
-   Returns a response with a 404 Not Found status code and an optional error message. It is used to indicate that the requested resource was not found.
+5. `notFound($message = 'Not found!')`   
+Returns a response with a 404 Not Found status code and an optional error message. It is used to indicate that the requested resource was not found.
 
-6. `internalError($message = 'Something went wrong!')`
-   Returns a response with a 500 Internal Server Error status code and an optional error message. It is used to indicate that an unexpected internal server error occurred.
+6. `internalError($message = 'Something went wrong!')`   
+Returns a response with a 500 Internal Server Error status code and an optional error message. It is used to indicate that an unexpected internal server error occurred.
 
-7. `error($message = 'Something went wrong!', int $statusCode = 500)`
-   Returns a response with the specified status code and error message.
+7. `error($message = 'Something went wrong!', int $statusCode = 500)`   
+Returns a response with the specified status code and error message.
 
 Please note that you can provide a custom error message for each error response if needed.
 
