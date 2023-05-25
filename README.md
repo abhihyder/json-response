@@ -143,7 +143,7 @@ You can chain methods together for more flexibility:
 
 ```php
 // Return a error response with a custom status code and message
-return JsonResponse::statusCode($statusCode)->success('Your message');
+return JsonResponse::statusCode($statusCode)->error($message);
 
 // Return a error response with a custom status code, header, and message
 return JsonResponse::withHeader($header)->error($message, 400);
