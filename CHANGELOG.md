@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.0.1] - 2025-05-18
+
+#### Fixed
+
+* Corrected the `@method` docblock annotation for the `data()` method:
+
+  ```php
+  @method static \Illuminate\Http\JsonResponse data(array|object $data, string $message = "Data fetched successfully!")
+  ```
+
+  > Ensures accurate static analysis and IDE support.
+
+---
+
+
 ## [3.0.0] - 2025-05-18
 ### Breaking Changes
 - Removed the `withData()` method. Use the new `data()` method instead.
