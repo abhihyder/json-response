@@ -79,7 +79,7 @@ The following methods are available for returning success responses:
 Returns a response with a 200 OK status code, a success message, and optional data.
 3. `success($message = "Request completed successfully!")`   
 Returns a response with a 200 OK status code and a success message.
-4. `withData($data, $message = "Data fetched successfully!")`   
+4. `data($data, $message = "Data fetched successfully!")`   
 Returns a response with a 200 OK status code, a success message, and the provided data.
 
 ### Method Chaining
@@ -100,7 +100,7 @@ Please note that the `statusCode()` method will not affect the chaining when usi
 
 ```json
 {
-  "status": true,
+  "success": true,
   "message": "Your message",
   "data": {
     // ...
@@ -155,7 +155,7 @@ Please note that the `statusCode()` method will affect only when chaining with `
 
 ```json
 {
-  "status": false,
+  "success": false,
   "message": "Your message" // Message can contain any data type
 }
 ```
