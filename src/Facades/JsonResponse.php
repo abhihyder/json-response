@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Illuminate\Http\JsonResponse success(string $message = "Request completed successfully!")
  * @method static \Illuminate\Http\JsonResponse created(string $message = "Data created successfully!", array $data = [])
  * @method static \Illuminate\Http\JsonResponse updated(string $message = "Data updated successfully!", array $data = [])
- * @method static \Illuminate\Http\JsonResponse withData(array $data, string $message = "Data fetched successfully!")
+ * @method static \Illuminate\Http\JsonResponse data(array $data, string $message = "Data fetched successfully!")
  * @method static \Illuminate\Http\JsonResponse badRequest(string $message = "Bad request!")
  * @method static \Illuminate\Http\JsonResponse unauthenticated(string $message = 'Unauthenticated!')
  * @method static \Illuminate\Http\JsonResponse invalidRequest(string $message = 'Invalid request!')
